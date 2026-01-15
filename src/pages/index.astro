@@ -26,9 +26,10 @@ import { SITE, HOME, SOCIALS } from "@consts";
           <!-- Social Links -->
           <div class="flex flex-wrap gap-4 items-center pt-2">
             {SOCIALS.map(social => (
-              <Link 
-                href={social.HREF} 
-                external 
+              <a
+                href={social.HREF}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={`${SITE.NAME} on ${social.NAME}`}
                 class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-black/10 dark:border-white/20 hover:border-purple-500 dark:hover:border-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/30 transition-all duration-200"
               >
@@ -36,7 +37,7 @@ import { SITE, HOME, SOCIALS } from "@consts";
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-              </Link>
+              </a>
             ))}
           </div>
         </section>
